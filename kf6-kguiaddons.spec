@@ -27,6 +27,7 @@ BuildRequires: cmake(Qt6ToolsTools)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6QuickTest)
 BuildRequires: cmake(PlasmaWaylandProtocols)
+BuildRequires: cmake(Qt6WaylandClient)
 Requires: %{libname} = %{EVRD}
 
 %description
