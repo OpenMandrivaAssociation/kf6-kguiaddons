@@ -1,6 +1,6 @@
 %define libname %mklibname KF6GuiAddons
 %define devname %mklibname KF6GuiAddons -d
-%define git 20230726
+%define git 20230802
 
 Name: kf6-kguiaddons
 Version: 5.240.0
