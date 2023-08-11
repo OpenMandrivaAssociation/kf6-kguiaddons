@@ -1,10 +1,10 @@
 %define libname %mklibname KF6GuiAddons
 %define devname %mklibname KF6GuiAddons -d
-%define git 20230802
+%define git 20230811
 
 Name: kf6-kguiaddons
 Version: 5.240.0
-Release: %{?git:0.%{git}.}2
+Release: %{?git:0.%{git}.}1
 Source0: https://invent.kde.org/frameworks/kguiaddons/-/archive/master/kguiaddons-master.tar.bz2#/kguiaddons-%{git}.tar.bz2
 Summary: Utilities for graphical user interfaces
 URL: https://invent.kde.org/frameworks/kguiaddons
@@ -33,10 +33,18 @@ Requires: %{libname} = %{EVRD}
 %description
 Utilities for graphical user interfaces
 
+%package -n kde-geo-scheme-handler
+Summary: Geo scheme handler for KDE (5 and 6)
+Group: System/Libraries
+
+%description -n kde-geo-scheme-handler
+Geo scheme handler for KDE (5 and 6)
+
 %package -n %{libname}
 Summary: Utilities for graphical user interfaces
 Group: System/Libraries
 Requires: %{name} = %{EVRD}
+Requires: kde-geo-scheme-handler = %{EVRD}
 
 %description -n %{libname}
 Utilities for graphical user interfaces
@@ -66,8 +74,10 @@ Utilities for graphical user interfaces
 %ninja_install -C build
 
 %files
-%{_bindir}/kde-geo-uri-handler
 %{_datadir}/qlogging-categories6/kguiaddons.*
+
+%files -n kde-geo-scheme-handler
+%{_bindir}/kde-geo-uri-handler
 %{_datadir}/applications/google-maps-geo-handler.desktop
 %{_datadir}/applications/openstreetmap-geo-handler.desktop
 %{_datadir}/applications/qwant-maps-geo-handler.desktop
