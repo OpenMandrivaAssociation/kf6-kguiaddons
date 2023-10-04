@@ -1,6 +1,6 @@
 %define libname %mklibname KF6GuiAddons
 %define devname %mklibname KF6GuiAddons -d
-%define git 20230927
+%define git 20231005
 
 Name: kf6-kguiaddons
 Version: 5.240.0
@@ -86,7 +86,6 @@ Utilities for graphical user interfaces
 %files -n %{devname}
 %{_includedir}/KF6/KGuiAddons
 %{_libdir}/cmake/KF6GuiAddons
-%{_qtdir}/mkspecs/modules/qt_KGuiAddons.pri
 %{_qtdir}/doc/KF6GuiAddons.*
 
 %files -n %{libname}
