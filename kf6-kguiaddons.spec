@@ -1,11 +1,17 @@
+%define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
+
 %define libname %mklibname KF6GuiAddons
 %define devname %mklibname KF6GuiAddons -d
-%define git 20231103
+#define git 20231103
 
 Name: kf6-kguiaddons
-Version: 5.240.0
+Version: 5.245.0
 Release: %{?git:0.%{git}.}1
+%if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kguiaddons/-/archive/master/kguiaddons-master.tar.bz2#/kguiaddons-%{git}.tar.bz2
+%else
+Source0: http://download.kde.org/%{stable}/frameworks/%{version}/kguiaddons-%{version}.tar.xz
+%endif
 Summary: Utilities for graphical user interfaces
 URL: https://invent.kde.org/frameworks/kguiaddons
 License: CC0-1.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0
