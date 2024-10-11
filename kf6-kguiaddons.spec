@@ -6,8 +6,8 @@
 #define git 20240217
 
 Name: kf6-kguiaddons
-Version: 6.6.0
-Release: %{?git:0.%{git}.}2
+Version: 6.7.0
+Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kguiaddons/-/archive/master/kguiaddons-master.tar.bz2#/kguiaddons-%{git}.tar.bz2
 %else
@@ -98,3 +98,4 @@ Utilities for graphical user interfaces
 
 %files -n %{libname}
 %{_libdir}/libKF6GuiAddons.so*
+%{_qtdir}/qml/org/kde/guiaddons
