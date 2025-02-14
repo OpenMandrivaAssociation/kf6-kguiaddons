@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kguiaddons
-Version: 6.10.0
+Version: 6.11.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kguiaddons/-/archive/master/kguiaddons-master.tar.bz2#/kguiaddons-%{git}.tar.bz2
@@ -20,6 +20,7 @@ Group: System/Libraries
 BuildRequires: cmake
 BuildRequires: cmake(ECM)
 BuildRequires: python
+BuildRequires: python%{pyver}dist(build)
 BuildRequires: cmake(Qt6DBusTools)
 BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(Qt6Network)
@@ -87,7 +88,7 @@ Utilities for graphical user interfaces
 %{_bindir}/kde-geo-uri-handler
 %{_datadir}/applications/google-maps-geo-handler.desktop
 %{_datadir}/applications/openstreetmap-geo-handler.desktop
-%{_datadir}/applications/qwant-maps-geo-handler.desktop
+#{_datadir}/applications/qwant-maps-geo-handler.desktop
 %{_datadir}/applications/wheelmap-geo-handler.desktop
 
 %files -n %{devname}
@@ -99,3 +100,4 @@ Utilities for graphical user interfaces
 %files -n %{libname}
 %{_libdir}/libKF6GuiAddons.so*
 %{_qtdir}/qml/org/kde/guiaddons
+%{_libdir}/python*/site-packages/KGuiAddons.cpython-*.so
