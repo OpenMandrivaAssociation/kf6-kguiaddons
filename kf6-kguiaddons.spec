@@ -70,6 +70,14 @@ Development files (Headers etc.) for %{name}.
 
 Utilities for graphical user interfaces
 
+%package -n python-kguiaddons
+Summary: Python bindings to KGUIAddons
+Group: Development/Python
+Requires: %{libname} = %{EVRD}
+
+%description -n python-kguiaddons
+Python bindings to KGUIAddons
+
 %prep
 %autosetup -p1 -n kguiaddons-%{?git:master}%{!?git:%{version}}
 %cmake \
@@ -103,4 +111,6 @@ Utilities for graphical user interfaces
 %files -n %{libname}
 %{_libdir}/libKF6GuiAddons.so*
 %{_qtdir}/qml/org/kde/guiaddons
+
+%files -n python-kguiaddons
 %{_libdir}/python*/site-packages/KGuiAddons.cpython-*.so
