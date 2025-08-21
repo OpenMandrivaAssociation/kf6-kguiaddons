@@ -40,6 +40,8 @@ BuildRequires: cmake(Qt6QuickTest)
 BuildRequires: cmake(PlasmaWaylandProtocols)
 BuildRequires: cmake(Qt6WaylandClient)
 BuildRequires: pkgconfig(wayland-client)
+BuildRequires: cmake(WaylandProtocols)
+BuildRequires: pkgconfig(vulkan)
 Requires: %{libname} = %{EVRD}
 
 %description
