@@ -1,0 +1,12 @@
+diff -up kguiaddons-6.18.0/python/CMakeLists.txt.omv~ kguiaddons-6.18.0/python/CMakeLists.txt
+--- kguiaddons-6.18.0/python/CMakeLists.txt.omv~	2025-09-12 21:12:33.118026268 +0200
++++ kguiaddons-6.18.0/python/CMakeLists.txt	2025-09-12 21:12:46.012936067 +0200
+@@ -22,6 +22,8 @@ set(generated_sources
+     ${CMAKE_CURRENT_BINARY_DIR}/KGuiAddons/ksystemclipboard_wrapper.cpp
+     ${CMAKE_CURRENT_BINARY_DIR}/KGuiAddons/kwordwrap_wrapper.cpp)
+ 
++include_directories(/usr/include/PySide6)
++
+ ecm_generate_python_bindings(
+     PACKAGE_NAME ${bindings_library}
+     VERSION ${KF_VERSION}
