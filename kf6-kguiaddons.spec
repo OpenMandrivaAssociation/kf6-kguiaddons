@@ -7,7 +7,7 @@
 
 Name: kf6-kguiaddons
 Version: 6.20.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kguiaddons/-/archive/master/kguiaddons-master.tar.bz2#/kguiaddons-%{git}.tar.bz2
 %else
