@@ -6,8 +6,8 @@
 #define git 20240217
 
 Name: kf6-kguiaddons
-Version: 6.29.0
-Release: %{?git:0.%{git}.}2
+Version: 6.30.0
+Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kguiaddons/-/archive/master/kguiaddons-master.tar.bz2#/kguiaddons-%{git}.tar.bz2
 %else
@@ -103,9 +103,9 @@ Python bindings to KGUIAddons
 
 %files -n kde-geo-scheme-handler
 %{_bindir}/kde-geo-uri-handler
+%{_datadir}/applications/cartes-geo-handler.desktop
 %{_datadir}/applications/google-maps-geo-handler.desktop
 %{_datadir}/applications/openstreetmap-geo-handler.desktop
-#{_datadir}/applications/qwant-maps-geo-handler.desktop
 %{_datadir}/applications/wheelmap-geo-handler.desktop
 
 %files -n %{devname}
